@@ -1,16 +1,30 @@
 {
   "name": "netflix-gpt",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "homepage": "https://prasad528260.github.io/netflix-gpt",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
+    "dev": "vite --host",
+    "build": "vite build --mode production",
+    "preview": "vite preview --host",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "start": "vite --host",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.10",
