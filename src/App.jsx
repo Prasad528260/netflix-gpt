@@ -6,7 +6,7 @@ import Body from "./components/Body";
 
 function App() {
   return (
-    <BrowserRouter basename="/netflix-gpt">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Body />}>
           <Route index element={<Login />} />

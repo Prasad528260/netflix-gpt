@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
+import MainCOntainer from "./MainCOntainer";
+import SecondaryContainer from "./SecondaryContainer";
 
 function Browse() {
-  return (
-    <div>
-       
-    </div>
-  )
+  useNowPlayingMovies();
+  return <div>
+    <MainCOntainer/>
+    <SecondaryContainer/>
+  </div>;
 }
 
-export default Browse
+export default Browse;
